@@ -3,7 +3,7 @@
 The *sinatra-rdiscount* extension provides `rdiscount` helper method
 for rendering RDiscount templates.
 
-To install it, run: 
+To install it, run:
 
     sudo gem install wbzyl-sinatra-rdiscount -s http://gems.github.com
 
@@ -12,10 +12,10 @@ To test it, create a simple Sinatra application:
     # app.rb
     require 'rubygems'
     require 'sinatra'
-      
+
     gem 'wbzyl-sinatra-rdiscount', '>=0.1.4'
     require 'sinatra/rdiscount'
-    
+
     get "/" do
       rdiscount "# Hello RDiscount"
     end
@@ -31,7 +31,7 @@ Another example could be find in the *examples* directory. Run it with:
     rackup -p 4567 config.ru
 
 
-## Template Languages (*update to The Sinatra Book*) 
+## Template Languages (*update to The Sinatra Book*)
 
 One important thing to remember is that you always have to reference
 templates and layouts with **symbols**, even if they’re in a subdirectory,
@@ -41,7 +41,7 @@ Rendering methods will render any strings passed to them directly.
 
 ### RDiscount Templates
 
-The following gems are required to render RDiscount templates: 
+The following gems are required to render RDiscount templates:
 *rdiscount*, *erubis*.
 
 This helper method:
@@ -55,7 +55,7 @@ renders template *./views/index.rdiscount*.
 If a layout named *layout.rdiscount* exists, it will be used each time
 a template is rendered.
 
-You can disable layouts by passing `:layout => false` 
+You can disable layouts by passing `:layout => false`
 to *rdiscount* helper. For example
 
     get '/' do
@@ -74,7 +74,7 @@ within *./views/application.rdiscount* layout.
 
 ## Important Info
 
-Layouts are **RHTML** — not RDiscount — files. 
+Layouts are **RHTML** — not RDiscount — files.
 Layout example:
 
     <!DOCTYPE html>
@@ -93,7 +93,7 @@ by `'{% %}'`. Template example:
     # Hello {%= @name %}
 
 Such a change in embedded code pattern was necessary,
-to avoid messing with RDiscount engine, 
+to avoid messing with RDiscount engine,
 which converts bare `&lt;` to `&amp;lt;`.
 Also I think that there is no way for RDiscount renderer
 to generate that line:

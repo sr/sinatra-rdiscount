@@ -8,9 +8,9 @@ module Sinatra
     def rdiscount(template, options={}, locals={})
       render :rdiscount, template, options, locals
     end
-    
+
   private
-    
+
     def render_rdiscount(data, options, locals, &block)
       if block_given?
         # render layout

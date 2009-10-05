@@ -4,7 +4,7 @@ require 'sinatra/rdiscount'
 
 class Test::Unit::TestCase
   include Rack::Test::Methods
-  
+
   attr_reader :app
 
   # Sets up a Sinatra::Base subclass defined with the block
