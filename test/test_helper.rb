@@ -1,9 +1,5 @@
 require 'test/unit'
 require 'rack/test'
-
-path = File.expand_path("../lib" + File.dirname(__FILE__))
-$:.unshift(path) unless $:.include?(path)
-
 require 'sinatra/rdiscount'
 require 'rdiscount'
 
