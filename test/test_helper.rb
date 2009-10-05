@@ -1,7 +1,6 @@
 require 'test/unit'
 require 'rack/test'
 require 'sinatra/rdiscount'
-require 'rdiscount'
 
 class Test::Unit::TestCase
   include Rack::Test::Methods
