@@ -1,4 +1,3 @@
-require 'erubis'
 require 'rdiscount'
 
 require 'sinatra/base'
